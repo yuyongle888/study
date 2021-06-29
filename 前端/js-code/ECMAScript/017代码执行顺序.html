@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代码执行顺序</title>
+</head>
+<body>
+<input type="button" value="hello" id="btn">
+<script>
+    //页面加载过程中 将a函数注册给了load事件
+    //页面加载完成后 load发生了 此时执行回调函数a
+    //回调函数a执行过程中 将b函数注册给了id="btn"的click事件
+    //当ID为"btn节点发生了click事件之后,b被调用并执行
+    window.onload=function () {//这个回调函数叫a
+document.getElementById("btn").onclick=function(){//这个回调函数叫做b
+    alert("hello ff")
+}
+    }
+</script>
+
+</body>
+</html>

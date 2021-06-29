@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background-color:pink;
+        }
+    </style>
+</head>
+<body>
+<button>显示</button>
+<button>隐藏</button>
+<button>切换</button>
+
+<div></div>
+</body>
+<script>
+    $(function(){
+        $("button").eq(0).click(function(){
+            $("div").show("2000")
+        }),
+        $("button").eq(1).click(function(){
+            $("div").hide("2000")
+        })
+        $("button").eq(2).click(function(){
+            $("div").toggle("2000")
+        })
+    })
+    //一般情况下都不加参数直接显示或隐藏
+</script>
+</html>

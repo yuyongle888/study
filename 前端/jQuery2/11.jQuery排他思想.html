@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<button>快速</button>
+<button>快速</button>
+<button>快速</button>
+<button>快速</button>
+<button>快速</button>
+</body>
+<script>
+    $(function () {
+//1隐式迭代 给所有的按钮绑定单击事件
+        $("button").click(function () {
+//2当前元素变化背景颜色
+            $(this).css("background","pink")
+            //其余兄弟去掉背景颜色 隐式迭代
+            $(this).siblings().css("background","")
+        })
+    })
+</script>
+</html>

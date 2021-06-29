@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script>
+			
+			function selectAllBut(){
+				//获得第一个checkbox的选中状态
+				var flag=$("#firstchk").prop("checked");//prop选中值
+				//为所有数据行CheckBox的选中状态设置
+				$(".aihao").prop("checked",flag);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="checkbox" id="firstchk"onclick="selectAllBut()"/>全选<br/>
+		<input type="checkbox"class="aihao" />吃<br/>
+		<input type="checkbox"class="aihao" />喝<br/>
+		<input type="checkbox"class="aihao" />嫖<br/>
+	</body>
+</html>

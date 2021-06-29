@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>表单验证</title>
+	</head>
+	<body>
+		<!--
+			1用户名不能为空(表单验证统一采用失去焦点则验证)
+			2用户名必须在6-14位之间
+		-->
+		<script>
+			
+			function checkName(username){
+				//alert(username);
+				//清除字符串前后空白
+				username=username.trim();
+				var nameError=document.getElementById("nameError")
+				//判断用户名是否为空
+				if(username==""){
+					
+					nameError.innerHTML="用户名不能为空";
+				}else{//判断长度非法
+					if(username.length<6 ||username.length>14){
+						nameError.innerHTML="用户名长度非法[6-14]"
+					}else{//说明长度合法
+						//用户名只能由数字或字母组成
+						//使用正则表达式
+						var regExp= /^0-9a-zA-Z$/
+						var ok=regExp.test(username);
+						if(ok){
+							//合法
+						}else{
+							//非法
+							nameError.innerHTML="用户名只能由字母或数字组成"
+						}
+						
+					}
+				}
+				
+			}
+			function clearError(){
+				var nameError=document.getElementById("nameError")
+					nameError.innerHTML="";
+			}
+		</script>
+		<form action="http:\\localhost:8080" method="get">
+															<!--this是当前文本框对象  value就是当前文本款的value-->
+			用户名<input type="text" name="username" id="use" onblur="checkName(this.value)" onfocus="clearError()"/>
+						<span id="nameError" style="color: red; font-size:12px;"></span><br />
+			<input type="submit" value="保存" />
+		</form>
+	</body>
+</html>

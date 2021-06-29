@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div class="yeye">我是爷爷
+<div class="father">我是爸爸
+    <div class="son">儿子</div>
+</div>
+
+</div>
+<div class="nav">
+    <p>我是皮</p>
+    <div>
+        <p>我是p</p>
+    </div>
+</div>
+</body>
+<script>
+    //注意一下都是方法 带括号
+    $(function () {
+        //父parent
+        console.log($(".son").parent())
+        //子
+        //(1)亲儿子 children()//子代选择器
+        $(".nav").children('P').css("color","pink");
+        //(3) 可以选里面所有的孩子 包括儿子 孙子 find();类似后代选择器
+        $(".nav").find("p").css("background",'red');
+        //兄
+
+    })
+</script>
+</html>

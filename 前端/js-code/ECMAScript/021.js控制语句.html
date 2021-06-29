@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>控制语句</title>
+</head>
+<body>
+<script>
+    //for in语句可以遍历对象的属性
+    User=function(username,password){
+        this.username=username;
+        this.password=password;
+    }
+    var u=new User("张三","5555")
+    alert(u.username+","+u.password);//张三,5555
+    alert(u["username"]+","+u["password"]);//张三,5555
+
+    for(var shuXingMing in u){
+        // alert(typeof shuXingMing)//string
+        alert(u[shuXingMing])//张三
+        //5555
+
+    }
+</script>
+
+</body>
+</html>

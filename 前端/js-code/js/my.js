@@ -1,0 +1,2 @@
+alert('zhangsan')
+alert("niubi")

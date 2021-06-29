@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>value</title>
+	</head>
+
+	<body>
+		姓名:<input type="text" neme="username" id="kkk" />
+		    <input type="button" onclick="get()"/> 
+	</body>
+		<script>
+		function get(){
+			//获取文本框对象
+		var username=	document.getElementById("kkk" );
+	//	获取value值 value不是一个方法是一个属性
+	//var use=username.value
+	//等号代表重新赋值
+var use=username.value="java";//标签里有什么属性就能点什么
+alert(use);
+username.type="password";
+		}
+	</script>
+</html>

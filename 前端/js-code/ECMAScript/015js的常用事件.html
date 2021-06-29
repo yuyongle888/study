@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js的常用事件</title>
+</head>
+<body>
+<!--注册事件的第一种方式直接在标签中使用事件句柄-->
+<!--一下代码含义 将sayHello函数注册到按钮上 等待click事件发生之后,该函数被浏览器调用我们称这个函数为回调函数-->
+<input type="button" value="lello" onclick="sayHello()"/>
+<input type="button" value="hello2" id="mybutn">
+<input type="button" value="hello3" id="mybutn1">
+<script>
+    /*
+    *   load	某个页面或图像被完成加载
+        submit	当表单提交时触发该事件
+        click	鼠标单击事件
+        dblclick	鼠标双击事件
+        blur	元素失去焦点
+        focus	元素获得焦点
+        change	用户改变域的内容
+        keydown	某个键盘的键被按下
+        keypress	某个键盘的键被按下或按住
+        keyup	某个键盘的键被松开
+        mousedown	某个鼠标按键被按下
+        mouseup	某个鼠标按键被松开
+        mouseover	鼠标被移到某元素之上
+        mouseout	鼠标从某元素移开
+        reset      表单重置
+        select      表单被锁定
+
+        任何一个事件都会对应一个事件句柄 十事件句柄就是在事件前面加on
+        onXXX这个事件句柄出现在一个标签属性位置上(事件句柄是以标签属性存在的)
+*/
+    //对于2当前程序来说sayHello被称为回调函数
+   // 回调函数:自己把函数写出来但自己不负责调用 有其他程序负责调用
+
+
+
+    function sayHello(){
+        alert("hell.jack")
+    }
+
+    function doSome() {
+        alert("你好")
+
+    }
+
+
+    //第二种注册事件方式 使用纯js代码完成事件的注册
+    //先获取到按钮对象(docment是全部小写 代表整个页面)
+    var btnObj=document.getElementById("mybutn");
+    //gei按钮对象属性赋值
+    btnObj.onclick=doSome;//注意千万别加小括号 btnObj.onclick=doSome();这是错误的写法
+                            //这行代码意义将dosume注册到click上
+
+
+    var btnObj1=document.getElementById("mybutn1");
+    btnObj1.onclick=function(){//这里函数叫做匿名函数 这个匿名函数也是一个回调函数
+        alert("test23")
+    }
+
+
+</script>
+
+
+</body>
+</html>

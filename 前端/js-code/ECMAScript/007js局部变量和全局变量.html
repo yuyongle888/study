@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>007局部变量和全局变量</title>
+</head>
+<body>
+<script>
+    //全局变量
+       //  在函数体外声明的变量 生命周期是 浏览器开启时声明 浏览器关闭之后销毁 尽量少用
+   //局部变量
+      //在函数体当中声明的变量 包括函数体的形参都属于局部变量
+      //生命周期是函数开启时局部变量内存空间开辟 函数执行结束 之后 局部变量内存空间释放 生命周期较短
+    var username='jack';
+    function sum() {
+        var username='tom';
+        alert(username)
+    }
+    sum();
+    alert(username)
+    //当一个变量无论在哪里声明的 只要没加var 都是全局变量
+    function mm() {
+        hh="shanghai"
+        alert(hh)
+    }
+    mm();
+    alert("我在"+hh)
+
+</script>
+</body>
+</html>

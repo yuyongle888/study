@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object类型</title>
+</head>
+<body>
+<script>
+    /*
+    *1 object是所有类型的超类型 自定义的类型 默认继承object
+    *2object包括那些属性?
+    *       prototype属性 常用的 主要是这个 作用:各类动态扩展属性和函数
+    *       constructor属性
+    * 3object类包含那些函数
+    *      toString
+    *      valueOf
+    *      toLocalString
+    * 4 在js中继承object 会继承object类中所有的属性及函数
+    * 换句话说自己定义的类中也有prototype属性和 constructor属性
+    * 5js中怎么定义类?怎么new对象?
+    * 定义类的语法
+    *      1
+    *      function 类名(形参){
+    *      }
+    *
+    *      2
+    *      类名=function(形参){
+    *      }
+    *      创建对象的语法:
+    *         new 构造方法名(实参);//构造方法和类名一致
+    *
+    *
+    *
+    * */
+    function  sayHello() {
+
+    }
+    //这种方式把sayHello当成一个普通函数
+    sayHello();
+
+
+    //这种方式把sayHello()当成一个类来创建对象
+  var obj=  new sayHello()//obj是一个引用保存内存地址指向堆中对象
+
+
+
+
+    function  student() {
+        alert("好学生2")
+    }
+
+
+    //当成一个普通函数
+    student()
+
+    //创建一个对象
+  let stu=  new student();
+    alert(stu)//[object Object]
+
+//js中类的定义,同时又是一个构造函数的定义
+    //在js中类的定义和够着函数的定义是放在一起完成的
+ function User(a,b,c) {//abc是形参属于局部变量.
+//声明属性(this代表当前对象)
+     //sum有三个属性 name age sex
+     this.name=a;
+     this.age=b;
+     this.sex=c
+ }
+ //创建对象
+    var u2=new User("张三",33,"女");
+    //访问对象的属性
+    alert(u2.age);
+    alert(u2.name);
+    alert(u2.sex);
+
+
+
+    //另一种类定义方法
+   emp= function(name,sal){
+        //属性
+       this.name=name;
+       this.sal=sal;
+    }
+    var el=new emp("amit",500);
+   alert(el["name"]+","+el.sal)
+
+
+
+  Product =function (prn,pname,price) {
+      //属性
+      this.prn=prn;
+      this.pname=pname;
+      this.price=price
+      //函数
+      this.getPrice=function () {
+         return this.price
+      }
+  }
+var pro=new Product(111,"西瓜",5.0)
+    var pri=pro.getPrice();
+    alert(pri)//5
+    //string扩张一个函数
+    String.prototype.suiyi=function () {
+        alert("这是给string扩展一个函数 叫做suiyi")
+    }
+
+    "abc".suiyi();//这是给string扩展一个函数 叫做suiyi
+</script>
+</body>
+</html>

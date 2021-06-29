@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>下拉菜单</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        .warp ul li{
+            position: absolute;
+            top:30px;
+        }
+        ul{
+            display: none;
+        }
+        .warp a{display: block;
+            height: 30px;
+            width: 100px;
+            text-decoration: none;
+            color: #000;
+            text-align: center;
+
+        }
+        .warp > ul >li{
+            float: left;
+            margin-right: 10px;
+            position: relative;
+        }
+        .warp li{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div class="warp">
+    <ul>
+    <li>
+        <ul>
+    <a href="javascript:void (0);">一级菜单</a>
+        <ul>
+            <li>
+            <a href="javascript:void (0);">二级菜单</a>
+            </li>
+            <li>
+                <a href="javascript:void (0);">二级菜单</a>
+            </li>
+            <li>
+                <a href="javascript:void (0);">二级菜单</a>
+            </li>
+        </ul>
+    </li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+</ul>
+</div>
+</body>
+</html>

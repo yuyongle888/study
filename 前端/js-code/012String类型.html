@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>012String类型</title>
+</head>
+<body>
+
+<script>
+    //js中怎么创建字符串
+  // 第一种 var a='abc';
+  // 第二种 var aa=new String("fds")
+    //主要注意的是:string是一个内置类 可以直接使用 string父类是object
+    //3无论小string亥是大string方法函数通用的
+    //4关于string的常用函数和方法
+    //  属性  length 获取字符串的长度
+   // 常用函数:
+    //     indexOf     获取指定字符串在当前字符串中第一次出现处的缩印
+    //     last IndexOf    获取指定字符串在当前字符串中最后一次出现处的缩印
+    //     replace(注意只替换第一个);
+    //     substr          替换
+    //     substring       截取子字符串
+    //      toLowerCase    转换小写
+    //      toUpperCase    转换大写
+    //      split          拆分字符串
+    //小string string类型
+    var a='abc';
+  alert(typeof(a)) ;//string
+
+
+  //大string object类型
+    var aa=new String("fdskk")//object
+    alert(typeof(aa));
+
+
+    alert(a.length)//3
+    alert(aa.length)//3
+
+
+
+    alert("http://www.bnaidu.com/".indexOf("http"))//0
+    alert("http://www.bnaidu.com/".indexOf("httpss"))//-1
+    //判断一个字符串中是否包含某个字符串
+    alert("http://www.bnaidu.com/".indexOf("http")>=0 ? "包含" : "不包含");//包含
+        //replace(注意只替换第一个);
+    alert("http://www.bnaidu.com/".replace("w","u"));
+    alert("http://www.bnaidu.com/".replace("w","u").replace("w","u"));
+    //全部替换用正则表达式
+
+    //     substr          截取字符串从索引2到4
+    alert("abcdefg".substr(2,4));//cdef
+
+    //     substring       截取子字符串包含2 不包含4
+    alert("abcdefg".substring(2,4));//cd
+    //      toLowerCase    转换小写
+    alert("WWWWWW".toLowerCase());//wwwww
+    //      toUpperCase    转换大写
+    alert("abcdefg".toUpperCase());//ABCDEFG
+    </script>
+</body>
+</html>

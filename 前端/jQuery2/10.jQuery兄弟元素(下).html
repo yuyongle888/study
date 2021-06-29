@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div>我是div</div>
+<div class="nav">我是div</div>
+<p>我是p</p>
+<ol>
+    <li>我是ol</li>
+    <li>我是ol</li>
+    <li class="item">我是ol下的li</li>
+    <li>我是ol</li>
+    <li>我是ol</li>
+</ol>
+<ul>
+    <ol>我是ul的</ol>
+    <ol>我是ul的</ol>
+    <ol>我是ul的</ol>
+    <ol>我是ul的</ol>
+    <ol>我是ul的</ol>
+</ul>
+</body>
+<script>
+    //注意都是方法 带括号
+    $(function () {
+         //兄弟元素(不包括自己)siblings()
+        $('ol .item').siblings("li").css("color","red")
+        //第n个元素
+        //1利用选择器方式选
+        $("ul ol:eq(3)").css("color",'red');
+//2利用选择方法选择
+        $("ul ol").eq(0).css("color","pink");
+        //判断是否有某个类名hasClass()
+        console.log( $("ol li").eq(2).hasClass("item"))
+    })
+</script>
+</html>

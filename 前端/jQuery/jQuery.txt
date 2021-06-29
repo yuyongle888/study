@@ -1,0 +1,27 @@
+1jquery学习重点
+2jQuery学习方式
+3jQuery技术介绍
+4jquery的使用
+5jQuery对象与JavaScript dom对象区别
+1Dom对象:
+       在浏览器加载网页时有浏览器负责创建的
+     一个HTML标签对应一个DOM对象
+     可以通过管理DOM对象,来关联HTML标签中的属性进行操作的
+ 2jQuery对象:
+   		1是[jQuery $()]负责创建的
+   		2jQuery对象就是一个数组
+   		3jQuery对象中存放的本次定位[dom对象]
+   		4可以通过jQuery对象中[功能函数]来快速定位[dom对象]进行操作管理
+ 
+ 6jQuery与dom对象的转换
+   JS 的 DOM 对象转换成 jQuery 对象
+  $(JS 的 DOM 对象);
+  
+ jQuery 对象转换成 JS 对象
+
+    jQuery 对象[索引];
+    jQuery 对象.get(索引);
+  7选择器
+  元素选择器    $("元素的名称");      根据元素名称获取元素对象们
+ id 选择器   $("#id的属性值");    根据id属性值获取元素对象
+   类选择器       $(".class的属性值"); 根据class属性值获取元素对象们

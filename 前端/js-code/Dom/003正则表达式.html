@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    /*
+    * 1.什么是正则表达式
+    *    正则表达式：是一种对字符串进行匹配的规则。
+    *2正则表达式独立学科 c++ java js 都支持
+    *3会用就行
+    *  //4创建正则表达式
+    //第一种:
+    var regExp=/正则表达式/
+    *第二种
+    * var regExp=new RegExp("正则表达式")
+    *
+    * 正则表达式对象test()方法
+    * true/false=正则表达式对象.test(用户填写的字符串);
+    * true匹配成功
+    * false匹配失败
+    * */
+window.onload=function () {
+    document.getElementById("button").onclick=function () {
+     let email=   document.getElementById("email").value;
+     var emailRegExp=/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+  var ok=   emailRegExp.test(email);
+  if(!ok){
+      document.getElementById("errorEmail").innerText="邮箱地址不合法"
+  }else {
+      document.getElementById("errorEmail").innerText="邮箱地址合法"
+  }
+    }
+    document.getElementById("email").onfocus=function () {
+        document.getElementById("errorEmail").innerText=""
+    }
+}
+
+</script>
+<input type="text"id="email">
+<span id="errorEmail" style="color: red;font-size: 12px"></span><br>
+<input type="button" value="验证邮箱"id="button">
+
+</body>
+</html>

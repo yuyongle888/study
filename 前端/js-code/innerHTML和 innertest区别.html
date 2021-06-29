@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>区别</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function setContent(){
+			//获取到div
+			var mydiv=document.getElementById('mydiv');
+			//设置div内容
+			//mydiv.innerHTML='<font color="red" size="4"> 不能为空</font';
+			mydiv.innerText='<font color="red" size="4"> 不能为空</font';
+			}
+		</script>
+		<div id="mydiv"></div>
+		<input type="button" value="不能为空" onclick="setContent()"/>
+	</body>
+</html>

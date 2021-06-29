@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>盒子阴影</title>
+    <style>
+        div {
+
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            /*inset 内阴影   默认外阴影 但不可以写 outset */
+            /* box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .3) inset; */
+            /* 原先盒子没有影子 鼠标经过就变成影子 */
+
+        }
+
+        div:hover {
+            box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, .3);
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

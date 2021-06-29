@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取文本框的value</title>
+</head>
+<body>
+<script>
+    /*
+    *1 JavaScript包括3大块
+    *ECMAScript:js核心语法(es规范/es262标准)
+    * DOM Document Object Model)(文档对象模型 对网页中的节点进行增删改过程)HTML文档被称为一个dom树来看待
+    *  BOM(Browser Object Model)：浏览器对象模型。
+    * 关闭浏览器打开一个新浏览器窗口后退,前进 浏览器地址栏上的地址都是Bom
+    *2.Bom和Dom区别和联系?
+    * Bom顶级对象:window
+    * Dom顶级对象:document
+    *
+    *   实际上Bom包括Dom
+    * */
+   // window.onload= function () {
+   //     // var btnEl=window.document.getElementById("btn")//[object HTMLInputElement]
+   //      var btnEl=document.getElementById("btn")//[object HTMLInputElement]
+   //
+   //     alert(btnEl)
+   //  }
+
+
+    window.onload=function () {
+     var bbn=   document.getElementById("bbn")
+        bbn.onclick=function () {
+       var bbb= document.getElementById("bbb")
+            alert(bbb.value)//你好 Jack)
+        }
+       //   var ccc=   document.getElementById("bbb").value = "booooo"
+    }
+
+</script>
+<!--<input type="button" id="btn" value="hello">-->
+
+
+<input type="text" id="bbb">
+<input type="button" value="获取文本框中输入的值" id="bbn">
+<input type="text" onblur="alert(this.value)">
+</body>
+</html>

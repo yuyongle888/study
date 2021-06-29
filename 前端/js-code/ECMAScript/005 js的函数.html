@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数</title>
+</head>
+<body>
+<script>
+    /*1js中的函数 等同于java中的方法 函数也是一种可以被重复利用的代码片段
+        一般都是可以完成 都是可以完成某个特定功能的
+      2.技术定义函数
+         语法格式:
+         第一种方式
+           function 函数名(形式参数列表) {
+           函数体;
+           }
+           第二种方式
+           函数名=function(形式参数列表){
+           函数体
+           }
+
+          js的函数不需要指定返回值类型 返回什么类型都可以
+        */
+    function sum(a,b){
+        //a b都是形式参数列表 都是形参(a 和b都是变量 变量名随意)
+        alert(a+b);
+    }
+  //  sum("nihao",900);
+
+    //定义sayHello函数
+    sayHello=function (userName) {
+        alert('hello'+userName)
+    }
+   // sayHello('张三');
+
+</script>
+<input type="button" value="hello" onclick="sayHello('jack')">
+<input type="button" value="hell" onclick="sum(30,40)">
+</body>
+</html>

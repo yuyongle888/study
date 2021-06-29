@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            height: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="设置边框" id="btnOne">
+<input type="button" value="设置文本" id="btnTwo">
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(document).ready(function () {
+        //设置边框
+        $("#btnOne").click(function () {
+            // alert("denyinai")
+            $('div').css('border','1px solid red' );
+        })
+//设置文本
+        $("#btnTwo").click(function () {
+            // alert("denyinai")
+            $('div').text('我是蛇')
+        })
+
+    })
+$(document).ready(function () {
+    console.log('我想回家')
+})
+//优势:
+</script>

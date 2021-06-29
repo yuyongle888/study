@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            whdth: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="imgs/nan.jpg">
+    <div>上午好</div>
+
+</body>
+<script>
+    let img = document.querySelector('img');
+    let div = document.querySelector('div');
+    //获取当前的小时数
+    let date = new Date();
+    var h = date.getHours();
+    //判断小时数改变文字信息
+    if (h < 12) {
+        img.src = "imgs/nan.jpg";
+        div.innerHTML = "亲上午好 好好写代码";
+    } else if (h < 18) {
+        img.src = "imgs/nv.jpg";
+        div.innerHTML = "亲下午好 好好写代码";
+    } else {
+        img.src = "imgs/1.png";
+        div.innerHTML = "亲晚上好 好好写代码";
+    }
+</script>
+
+</html>

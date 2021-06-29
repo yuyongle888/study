@@ -1,0 +1,58 @@
+表格:员工表 工资等级表 部门表
+1.取得每个部门最高薪水的人员名称?
+2.那些人的薪水在自己部门的平均薪水之上?
+	ename sal deptno dname 唯一没有的条件:自己部门的平均薪水
+	1.拿到部门平均薪水
+	select deptno,avg(sal) from emp group by deptno;
+	2.平均薪水之上
+		外连接查询
+	select e.ename,e.deptno,e.sal,t.avgsal
+	from emp e
+	left join (select deptno,avg(sal) avgsal from emp group by deptno) t
+	on e.deptno = t.deptno 
+	where e.sal > t.avgsal;
+		内连接查询
+	select e.ename,e.deptno,e.sal,t.avgsal
+	from emp e
+	join (select deptno,avg(sal) avgsal from emp group by deptno) t
+	on e.deptno = t.deptno and e.sal > t.avgsal;
+
+	注意: 什么时候用子查询,当子查询的条件顺序出现在要使用条件的顺序之后这种情况使用
+	      例如:where中要使用分组函数的的结果,那么必须使用子查询,
+	           
+
+3.取得(每个部门中所有人的平均薪水)的等级?
+	
+	1.取得每个部门中所有人的平均薪水
+	select deptno,avg(sal) avgsal from emp group by deptno;
+	2.薪水等级
+	select t.deptno,s.grade
+	from (select deptno,avg(sal) avgsal from emp group by deptno) t
+	left join salgrade s
+	on t.avgsal between s.losal and s.hisal;
+
+	取得每个部门中所有人的平均的(薪水等级)
+
+	1.先找到所有人的薪水等级
+
+	select e.ename,e.sal,s.grade e.deptno,avg()
+	from emp e
+	left join salgrade s
+	on e.sal between s.losal and s.hisal
+
+	group by deptno
+
+
+	2.每个部门的平均值
+
+
+
+	
+4.不准用max函数取得员工最高薪水(给出两种方案)
+	1.工资排降序只取第一位
+	select ename,sal from emp order by sal desc limit 1;
+	2.自连接,连接条件是a.sal < b.sal ,a表中的每一个sal都会和吧表的每一个sal进行比较
+	select distinct a.ename,a.sal
+	from emp a
+	join emp b
+	on a.sal < b.sal;

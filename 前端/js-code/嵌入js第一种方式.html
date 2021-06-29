@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>嵌入js</title>
+	</head>
+	<body>
+		<!--事件以标签属性形式存在
+			window 代表浏览器窗口事件 有一个alert()方法
+
+		-->
+		<input type="button" value="hello" onclick="window.alert(123456)" />
+	
+		<!--外面双引号里面就单引号-->
+		<input type="button" value="hello" onclick="window.alert('123456888')" />
+		
+		
+		<!--嵌入js第二种方式-->
+		<script
+			alert("0");
+			></script>
+	</body>
+</html>

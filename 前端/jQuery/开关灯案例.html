@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            display: block;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body>
+<button>开灯</button>
+<button>关灯</button>
+<img src="imgs/Snipaste_2021-04-18_17-20-03.png">
+
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    //获取到按钮们
+   var buttons= document.getElementsByTagName("button");
+   //console.log(buttons);
+   //给关灯按钮设置点击事件
+   buttons[1].onclick=function () {
+       $('body').css('backgroundColor','black')
+   }
+   // buttons[0].onclick=function () {
+   //     $('body').css('backgroundColor','white')
+   // }
+    $(buttons[0]).click(function () {
+
+        $('body')[0].style.backgroundColor='white'
+
+    })
+</script>
+</html>

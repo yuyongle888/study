@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        li{width: 200px;
+            height: 200px;
+            background-color: pink;
+            display: inline-block;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+<ul id="listUl">
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+    <li>看不见</li>
+    <li>看得见</li>
+</ul>
+<button id="first">上一页</button>
+<button id="last">下一页</button>
+
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        //需求找到所有的li标签 分别设置透明度
+        //获取所有的li标签
+        var first=$('#listUl').children();
+       //console.log(first);
+        first.each(function (index , element) {
+            // console.log(index);//每一个li标签的索引
+            // console.log(element);//每一个li标签是一个dom对象
+            var count =0;
+            $('#first').click(function () {
+                count++
+
+            });
+            console.log(count);
+            $(element).css('backgroundColor');
+        })
+
+
+        $('#last').click(function () {
+
+        })
+    })
+</script>
+</html>

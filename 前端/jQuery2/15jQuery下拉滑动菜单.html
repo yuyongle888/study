@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        div{
+            width:200px;
+            height:200px;
+            background-color:pink;
+
+        }
+    </style>
+</head>
+<body>
+<button>下拉滑动</button>
+<button>上拉滑动</button>
+<button>切换滑动</button>
+
+<div></div>
+</body>
+<script>
+    $(function(){
+        $("button").eq(0).click(function(){
+          //  slideDown()上拉滑动
+            $("div").slideDown()
+        }),
+            $("button").eq(1).click(function(){
+                //slideUp() 下拉滑动
+                $("div").slideUp()
+            })
+        $("button").eq(2).click(function(){
+            //滑动切换 slideToggle
+            $("div").slideToggle()
+
+        })
+    })
+</script>
+</html>

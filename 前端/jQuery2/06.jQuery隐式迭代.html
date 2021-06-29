@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div>我是div</div>
+<div class="nav">我是div</div>
+<p>我是p</p>
+<ol>
+    <li>我是ol</li>
+    <li>我是ol</li>
+    <li>我是ol</li>
+    <li>我是ol</li>
+    <li>我是ol</li>
+</ol>
+<ul>
+    <ol>我是ul的</ol>
+    <ol>我是ul的</ol>
+    <ol>我是ul的</ol>
+    <ol>我是ul的</ol>
+    <ol>我是ul的</ol>
+</ul>
+</body>
+<script>
+ //获取4div元素元素
+    console.log($('div'));
+    //修改div背景颜色 jquery不能使用style
+    $("div").css("background","pink");
+    //隐式迭代把匹配的所有的元素内部进行偏离循环 给每一个元素增加css这个方法
+    $('ul ol').css("color","red")
+</script>
+</html>

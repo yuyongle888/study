@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="button" value="获取" id="getBtn">
+<input type="button" value="设置" id="setBtn">
+<div class="div1">我是一个div1标签
+<p>
+    我是一个p标签     <span>span1</span>
+</p>
+</div>
+
+
+<div class="div2">我是一个div2标签
+    <p>
+        我是一个p标签     <span>span2</span>
+    </p>
+</div>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        //获取文本text方法不给参数 会把div中所有的文本获取出来 包括后代
+        $('#getBtn').click(function () {
+          var cansu=  $('.div1').text()
+            console.log(cansu);
+        })
+       //设置 文本 text方法给参数  会把原来的文本覆盖 会给多个元素设置文本
+        $('#setBtn').click(function () {
+            var cansu=  $('.div1').text("我是新设置文本")
+            console.log(cansu);
+        })
+    })
+</script>
+</html>

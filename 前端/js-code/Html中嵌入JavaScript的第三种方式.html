@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Html中嵌入JavaScript的第三种方式</title>
+</head>
+<body>
+<!--同一个js文件可以被引入多次-->
+<script type="text/javascript" src="my.js">
+    // window.alert("hei") 这里代码不会被执行
+</script>
+<script type="text/javascript">
+    window.alert("xiaonian")
+</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Html中嵌入JavaScript的第一种方式</title>
+</head>
+<body>
+<!--1 要实现的功能:
+    用户点击以下按钮弹出消息框
+    2js是一门事件驱动型编辑语言 依靠事件去驱动 然后执行对应程序
+    在js中有很多事件 鼠标单击 单词:click 并且任何事件都会对应一个事件句柄 叫做成onclick(区别:前面有一个on
+    事件句柄以HTML属性存在)
+    3.onclick='js代码'执行原理
+    页面代码打开时 代码并不会执行 只是把就是代码注册到按钮click事件上
+    等click事件发生之后 注册在onclick后面的代码会被浏览器自动调用
+    4怎么使用js代码弹出消息框
+     在js中有一个内置对象叫window 全部小写 可以直接拿来使用
+     window对象有一个函数叫alert 用法是 window.alert('消息')这样就可以弹窗
+     5 js中字符串可以用双引号 也可以用单引号
+     6 js中一条语句结束后可以有; 也可以没有
+     7 wimdow. 可以省略不写
+-->
+    <input type="button" value="hello" onclick="window.alert('hello 小红')"/>
+    <input type="button" value="hello" onclick="alert('hello 小燕')"/>
+</body>
+</html>

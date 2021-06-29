@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--一定不要忘记引入bootStrap样式文件-->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>06.栅格系统使用</title>
+    <style>
+        [class^="col"]{
+        border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">1</div>
+        <div class="col-xs-3">2</div>
+        <div class="col-xs-3">3</div>
+        <div class="col-xs-3">4</div>
+    </div>
+<!--如果孩子份数相加等于12 则会占满整个盒子-->
+    <div class="row">
+        <div class="col-xs-5">1</div>
+        <div class="col-xs-2">2</div>
+        <div class="col-xs-3">3</div>
+        <div class="col-xs-2">4</div>
+    </div>
+    <!--如果孩子份数相加小于12 则会占不满整个container 会有空白 -->
+    <div class="row">
+        <div class="col-xs-5">1</div>
+        <div class="col-xs-2">2</div>
+        <div class="col-xs-2">3</div>
+        <div class="col-xs-2">4</div>
+    </div>
+    <!--如果孩子份数相加大于12 多出的一行则会另一行显示 -->
+    <div class="row">
+        <div class="col-xs-5">1</div>
+        <div class="col-xs-2">2</div>
+        <div class="col-xs-2">3</div>
+        <div class="col-xs-7">4</div>
+    </div>
+</div>
+</body>
+</html>

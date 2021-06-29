@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="jquery.min.js"></script>
+    <title>Title</title>
+    <style>
+        div{
+            height: 200px;
+            width: 400px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<script>
+    //1DOM对象: js获取的对象就是Dom对象
+var div= document.querySelector(`div`);
+
+div.style.display='none';
+    //2$jquery对象用jQuery获取的对象就是jQuery对象 本质:用$ 把Dom元素进行2包裹
+  var myDiv=  $('div')//就是一个jQuery对象
+    myDiv.hide();
+    //3jQuery对象只使用jQuery方法 Dom对象只是用js方法
+
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="oo"></div>
+</body>
+<script>
+    //引入一个文件回执行他的代码
+    //是一个自治性函数
+    $(function () {
+
+    })
+    //4.1如果参数传递是一个匿名函数 入口函数
+    $(function () {
+
+    })
+    //如果参数传递是一个字符串 选择器/创建一个标签
+    $("#bbtn");
+    $('<div>我是yigediv</div>')
+    //如果是一个 dom对象 他就会把dom对象转换成jQuery对象
+    // $(dom对象)
+    //dom对象就是原生js获取的对象
+    //jQuery对象
+   // 利用jQuery选择器获取到的对象
+
+//dom对象转换成jQuery对象
+ var oo=   document.getElementById('oo')
+   var pp= $(oo)
+    console.log(pp)
+   var ll= pp.get(1);
+    console.log(ll);
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数2</title>
+</head>
+<body>
+
+</body>
+<script>
+    function sum(a,b) {
+    return a+b
+    }
+    //调用函数sum
+    var kk=sum(1,6);
+    alert(kk)
+
+
+   var ll=sum("jack");  //赋值a,    b是undefined
+    alert(ll) //jackundefined
+
+    var kkk=sum();
+    alert(kkk);//NaN (是个具体存在的值表示不是数字 Not a Number)
+    var mm=sum(1,2,3);
+    alert(mm);//3
+
+
+//js中函数名相同 后声明的会把先声明的覆盖
+    function test1(username) {
+        alert("xioayan")
+    }
+    function test1() {
+        alert("xioayan,xiaonian")
+    }
+    test1("list")
+</script>
+</html>

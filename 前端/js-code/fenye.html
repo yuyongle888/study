@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            display: block;
+        }
+        html {
+            background-color: #fff;
+            font: 12px Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+        }
+        .page-wrap .pager {
+            width: 924px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            background: #fff;
+            padding: 30px 27px 35px;
+            text-align: center;
+        }
+        .pager {
+            overflow: hidden;
+            line-height: 40px;
+            font-family: Arial,sans-serif;
+            margin: 0 0 5px;
+            display: block;
+            width: 100%;
+        }
+        .pager .pages {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        li, ol, ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul {
+            display: block;
+            list-style-type: disc;
+            margin-block-start: 1em;
+            margin-block-end: 1em;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
+            padding-inline-start: 40px;
+        }
+        .page-wrap .pager {
+            width: 924px;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+            border-bottom-left-radius: 4px;
+            border-bottom-right-radius: 4px;
+            background: #fff;
+            padding: 30px 27px 35px;
+            text-align: center;}
+        .pager {
+            overflow: hidden;
+            line-height: 40px;
+            font-family: Arial,sans-serif;
+            margin: 0 0 5px;
+            display: block;
+            width: 100%;
+        }
+        .page-wrap .pager .pages .page-item {
+            margin-right: 8px;
+        }
+        .pager .pages .page-item {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            vertical-align: middle;
+        }
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+        .page-wrap .pager .pages .page-item button {
+            min-width: 17px;
+            height: 40px;
+        }
+        .pager .pages .page-item.active button, .pager .pages .page-item button:hover {
+            background: #00a1d6;
+            color: #fff;
+            border: 1px solid #00a1d6;
+        }
+        .pager .pages .page-item button {
+            color: #222;
+            cursor: pointer;
+            outline: none;
+            text-align: center;
+            border-radius: 4px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            background-image: none;
+            transition: all .2s;
+            font-size: 14px;
+            min-width: 15px;
+            margin: 0 2px;
+            padding: 0 13px;
+            float: left;
+            display: block;
+            height: 38px;
+            line-height: 38px;
+        }
+        button {
+            appearance: button;
+            -webkit-writing-mode: horizontal-tb !important;
+            text-rendering: auto;
+            color: -internal-light-dark(buttontext, rgb(170, 170, 170));
+            letter-spacing: normal;
+            word-spacing: normal;
+            text-transform: none;
+            text-indent: 0px;
+            text-shadow: none;
+            display: inline-block;
+            text-align: center;
+            align-items: flex-start;
+            cursor: default;
+            background-color: -internal-light-dark(rgb(239, 239, 239), rgb(74, 74, 74));
+            box-sizing: border-box;
+            margin: 0em;
+            font: 400 13.3333px Arial;
+            padding: 1px 6px;
+            border-width: 2px;
+            border-style: outset;
+            border-color: -internal-light-dark(rgb(118, 118, 118), rgb(195, 195, 195));
+            border-image: initial;
+        }
+        .page-wrap .pager .pages .page-item {
+            margin-right: 8px;
+        }
+        .pager .pages .page-item {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 700;
+            vertical-align: middle;
+        }
+        li {
+            display: list-item;
+            text-align: -webkit-match-parent;
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+    <div class="pager">'
+        <ul class="pages">
+
+            <li class="page-item active">
+                <button class="pagination-btn num-btn">
+                    1
+                    </button>
+            </li>
+            <li class="page-item">
+                <button class="pagination-btn num-btn">
+                         2
+                </button>
+            </li>
+            <li class="page-item">
+                <button class="pagination-btn num-btn">
+                 3
+                </button>
+            </li><li class="page-item">
+            <button class="pagination-btn num-btn">
+                    4
+            </button>
+             </li>
+            <li class="page-item">
+                <button class="pagination-btn num-btn">
+                    5
+                </button>
+            </li>
+            <li class="page-item">
+                <button class="pagination-btn num-btn">
+                    6
+                </button>
+            </li>
+            <li class="page-item">
+                <button class="pagination-btn num-btn">
+                    7
+            </button>
+            </li><strong>...</strong>
+            <li class="page-item last"><button class="pagination-btn">
+                     50
+</button></li><li class="page-item next"><button class="nav-btn iconfont icon-arrowdown3">
+    下一页
+</button></li></ul><!----></div></div>
+</body>
+</html>

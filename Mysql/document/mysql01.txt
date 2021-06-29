@@ -1,0 +1,57 @@
+	select		5
+		...
+	from			1
+		...		
+	where			2
+		...	
+	group by		3
+		...
+	having		4
+		...
+	order by		6
+		...
+	limit			7
+		...;
+
+1.创建数据库:create database xxx;
+2.查看数据库:show databases;
+3.使用数据库:use xxx;
+4.删除数据库:drop database xxx;
+5.查看数据库有那些表格:show tables;
+6.查看表结构:desc emp;
+7.查看建表语句:show create table emp;
+8.查询后的字段:可以进行运算,改名
+9.条件查询:
+10.null要用:is null或is not null来判断,不能用"= null"判断
+11.排序:order by;默认升序,asc升序,desc降序,在前面的字段起主导作用
+12.分组函数:count,max,min,avg,sum,分组函数自动忽略null
+13.只要有null参与的运算,结果一定为null,解决方法ifnull(字段,默认值)
+14.分组:group by
+15.去重:distinct,只能出现在所有字段的最前面
+16.多表连接查询
+17.内连接:inner join   on
+18.外连接:left join   on
+19.1.内连接,显示两个表中有联系的所有数据;
+
+　　2.左链接,以左表为参照,显示所有数据;
+
+　　3.右链接,以右表为参照显示数据;
+20.查询哪个部门没有员工.
+21.查询所有员工的工资等级和部门名称
+22.union limit
+23.create建表语句:create table 表名(字段,数据类型,约束);
+24.insert插入语句:1.一次插入多个value,中间用","隔开 2.key可以省略,这样value必须全有,并且顺序不能乱
+25.表的复制:create table 表名 as select语句;
+	将查询结果插入到一张表当中:insert into dept1 select * from dept;
+26.update修改语句:update 表名 set 字段名1=值1,字段名2=值2... where 条件;
+27.delete删除语句:delete from 表名 where 条件;
+28.怎么删除大表中的数据？（重点）
+		truncate table 表名; // 表被截断，不可回滚。永久丢失。
+29.drop 表名;
+30.约束:1.not null 2.unique 3.primary key 4.foreign key
+31.主键自增:auto_increment
+
+
+
+
+

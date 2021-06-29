@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery过滤选择器</title>
+</head>
+<body>
+<ul>
+    <li>我是第1个li标签</li>
+    <li>我是第2个li标签</li>
+    <li>我是第3个li标签</li>
+    <li>我是第4个li标签</li>
+    <li>我是第5个li标签</li>
+    <li>我是第6个li标签</li>
+    <li>我是第7个li标签</li>
+    <li>我是第8个li标签</li>
+    <li>我是第9个li标签</li>
+    <li>我是第10个li标签</li>
+    <li>我是第11个li标签</li>
+    <li>我是第12个li标签</li>
+    <li>我是第13个li标签</li>
+    <li>我是第14个li标签</li>
+    <li>我是第15个li标签</li>
+    <li>我是第16个li标签</li>
+    <li>我是第17个li标签</li>
+    <li>我是第18个li标签</li>
+    <li>我是第19个li标签</li>
+    <li>我是第20个li标签</li>
+</ul>
+</body>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script>
+    //设置奇数行标签为天蓝色
+    $("li:odd").css('backgroundColor','skyblue');
+    //设置偶数行为pink
+    $('li:even').css('color','pink');
+    //首尾两行显示为红
+    $('li:eq(0)').css("font-size",'100px');
+    $('li:eq(19)').css('background-color','red')
+</script>
+</html>

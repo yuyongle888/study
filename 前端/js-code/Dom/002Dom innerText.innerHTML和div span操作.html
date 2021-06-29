@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dom innerText innerHTML和div span操作</title>
+    <style>
+        #div1{
+            background-color: #00a1d6;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            border: 1px solid black;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+<input type="button"id="btn" value="设置div中的内容">
+<div id="div1"></div>
+</body>
+<script>
+    /*
+    *  innerText 添加文本内容，不解析标签
+       innerHTML 添加文本内容，解析标签
+    * */
+window.onload=function () {
+    document.getElementById("btn").onclick=function () {
+        // alert("ooooo")
+        //document.getElementById("div1").innerHTML="<font color='red'>用户名不能为空</font>"
+        document.getElementById("div1").innerText="<font color='red'>用户名不能为空</font>"
+    }
+}
+</script>
+</html>

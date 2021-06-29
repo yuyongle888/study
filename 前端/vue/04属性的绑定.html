@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>属性的绑定</title>
+</head>
+<body>
+<div id="bande">
+<!--<a v-bind:href="url">百度首页</a>-->
+    <!--v-bind可以省略-->
+    <a :href="url">百度首页</a>
+</div>
+</body>
+<script src="js/vue.js"></script>
+<script>
+    new Vue ({
+        el:"#bande",
+        data:{
+            url:"https://www.baidu.com"
+        }
+    });
+</script>
+</html>

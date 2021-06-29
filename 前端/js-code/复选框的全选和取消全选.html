@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>全选和取消全选</title>
+	</head>
+	<!--load事件在页面所有元素加载完成之后发生-->
+	<body onload="bindClick()">
+		
+		<script type="text/javascript">
+//			
+//		function checkAll(){
+//			//获取第一个复选框对象
+//			var kkk=document.getElementById("firstchk");
+//			//获取第一个复选框选中状态
+//			
+//			if(kkk.checked){
+//				//全选
+//		var lll=document.getElementsByName("aihao")//获得一个数组
+//			//对数组进行遍历
+//			for(var i=0; i<lll.length;i++){
+//				lll[i].checked=true;
+//			}else{
+//					//全选
+//			var lll=document.getElementsByName("aihao")//获得一个数组
+//		//对数组进行遍历
+//		for(var i=0; i<lll.length;i++){
+//			lll[i].checked=false;
+//		}
+//	}
+//		}
+//		}
+		function checkAll(){
+		var firstr=	document.getElementById("firstchk");
+		var aihaojj=document.getElementsByName("aihao");
+		for(var i=0; i<aihaojj.length;i++){
+		aihaojj[i].checked=firstr.checked;
+		}
+		
+		}
+		
+		function bindClick(){
+			var aihaojj=document.getElementsByName("aihao");
+			for(var i=0; i<aihaojj.length;i++){
+		aihaojj[i].onclick=function(){
+			//alert("aihao")
+			//当选中数相等 第一个复选框选中 其余情况未选中
+			//获取总数
+		var count=aihaojj.length;
+		//获取选中数量
+		var checkedcound=0;
+		for(var i=0;i<aihaojj.length;i++){
+			if(aihaojj[i].checked){
+				checkedcound++;
+			}
+		}
+//		if(count==checkedcound){
+//			document.getElementById("firstchk").checked=true;
+//		}else{
+//					document.getElementById("firstchk").checked=false;
+//		}
+document.getElementById("firstchk").checked=(count==checkedcound);
+		}
+		}
+		}
+</script>
+		<input type="checkbox" id="firstchk"onclick="checkAll()"/><br/>
+		<input type="checkbox"name="aihao" value="1"/>吃<br/>
+		<input type="checkbox"name="aihao" value="2"/>喝<br/>
+		<input type="checkbox"name="aihao" value="3"/>嫖<br/>
+		<input type="checkbox"name="aihao" value="3"/>赌<br/>
+		<input type="checkbox"name="aihao" value="4"/>抽烟<br/>
+		<input type="checkbox"name="aihao" value="5"/>唱歌<br/>
+		<input type="checkbox"name="aihao" value="6"/>打游戏<br/>
+		<input type="checkbox"name="aihao" value="7"/>蹦迪<br/>
+
+	</body>
+</html>

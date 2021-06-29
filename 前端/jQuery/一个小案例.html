@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            height: 100px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<input type="button" value="设置边框" id="btnOne">
+<input type="button" value="设置文本" id="btnTwo">
+<div></div>
+<div></div>
+<div></div>
+</body>
+<script>
+    //入口函数
+    window.onload=function () {
+        //先获取到对应的函数
+        let btnOne=  document.getElementById("btnOne");
+        let btnTwo=  document.getElementById("btnTwo");
+        let divs=  document.getElementsByTagNameNS("div");
+        //设置点击事件
+        btnOne.onclick=function(){
+            for(   let i=0; i<divs.length;i++){
+                divs[i].style.border='1px solid red';
+            }
+        };
+
+        btnTwo.onclick=function(){
+            for(   let i=0; i<divs.length;i++){
+                divs[i].textContent="我睡设置2的文本";
+            }
+        }
+    }
+    // window.onload=function () {
+    //     console.log("我是又一个入口函数")
+    // }
+</script>
+</html>
+

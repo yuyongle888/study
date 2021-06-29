@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" value="当前系统显示时间" onclick="statr()">
+<div id="timeDiv"></div>
+</body>
+<script>
+    /*定时器
+唯一标识 setTimeout(功能，毫秒值)：设置一次性定时器。
+clearTimeout(标识)：取消一次性定时器。
+唯一标识 setInterval(功能，毫秒值)：设置循环定时器。
+clearInterval(标识)：取消循环定时器。*/
+    //当前时间
+   var newTime= new Date();
+   // // 输出
+   //  document.write(newTime)
+    //转换格式
+ // var date=  newTime.toLocaleDateString()
+ //var date=   newTime.toLocaleTimeString()
+   // var date =  newTime.toDateString()
+   var date  = newTime.getFullYear();
+   // var date= newTime.toLocaleString()
+    document.write(date)
+    //怎么获取总好秒数(1970年到现在总秒豪数)
+    var times=newTime.getTime()
+    document.write(times)
+</script>
+<script>
+
+</script>
+</html>
