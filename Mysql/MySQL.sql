@@ -123,3 +123,4 @@ SELECT * FROM student LIMIT 5,5;
 SELECT * FROM student LIMIT 10,5;
 -- 第四页
 SELECT * FROM student LIMIT 15,5;
+
